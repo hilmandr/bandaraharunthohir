@@ -87,27 +87,27 @@ export const MenuDashboard: sideNavDashboard[] = [
   },
   {
     label: "Kegiatan & Berita",
-    path: "/dashboard/projects",
+    path: "/dashboard/kegiatan-berita",
     icon: MdNewspaper,
   },
   {
     label: "Jadwal Penerbangan",
-    path: "/dashboard/projects",
+    path: "/dashboard/jadwal-penerbangan",
     icon: LuPlaneTakeoff,
   },
   {
     label: "Galeri",
-    path: "/dashboard/articles",
+    path: "/dashboard/galeri",
     icon: LuImage,
   },
   {
     label: "Laporan Kegiatan Harian",
-    path: "/dashboard/messages",
+    path: "/dashboard/laporan-kegiatan-harian",
     icon: MdEventNote,
   },
   {
     label: "Pesan",
-    path: "/dashboard/messages",
+    path: "/dashboard/pesan",
     icon: MdMessage,
   },
 ];
