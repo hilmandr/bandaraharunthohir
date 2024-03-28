@@ -1,9 +1,13 @@
+import { forwardRef, useCallback, useState } from "react";
+import { EditorProps } from "react-draft-wysiwyg";
 import Container from "@/components/container";
 import HeaderDashboard from "@/components/dashboard/header";
-import { TableLaporanKegiatanHarian } from "@/components/dashboard/table-laporan-kegiata-harian";
-import { cn } from "@/lib/utils";
+import InputBerita from "@/components/dashboard/input-berita";
 
-export default function LaporanKegiatanHarian() {
+export default forwardRef<Object, EditorProps>(function RichTextEditor(
+  props,
+  ref
+) {
   return (
     <>
       <div className=" flex w-full bg-white">
@@ -11,14 +15,14 @@ export default function LaporanKegiatanHarian() {
           <HeaderDashboard />
           <div className=" flex flex-col w-full mt-10">
             <h1 className=" text-lg font-semibold">
-              Data Laporan Kegiatan Harian
+              Input Berita atau Kegiatan
             </h1>
             <div className=" flex w-full">
-              <TableLaporanKegiatanHarian laporan={[]} />
+              <InputBerita />
             </div>
           </div>
         </Container>
       </div>
     </>
   );
-}
+});

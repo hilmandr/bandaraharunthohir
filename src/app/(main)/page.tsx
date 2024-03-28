@@ -1,4 +1,3 @@
-import { getLaporanByDate } from "@/action/laporan-kegiatan";
 import Album from "@/components/home/album";
 import Berita from "@/components/home/berita";
 import ViewKegiatanHarian from "@/components/home/laporan-kegiatan-harian";

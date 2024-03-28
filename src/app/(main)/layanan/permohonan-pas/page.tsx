@@ -14,14 +14,26 @@ export default function permohonanPas() {
         </div>
       </div>
       <Container className=" px-24 py-10">
-        <div className=" flex w-full items-center justify-center">
-          <div className=" flex w-[768px] aspect-[1/2.7] relative">
-            <Image
-              src="/assets/images/permohonan-pas.png"
-              alt=""
-              fill
-              className=" object-center object-cover"
-            />
+        <div className=" grid grid-cols-3 gap-5">
+          <div className=" flex w-full items-start justify-center">
+            <div className=" flex w-[768px] aspect-[4/3.2] relative">
+              <Image
+                src="/assets/images/tarif-pas.png"
+                alt=""
+                fill
+                className=" object-center object-cover"
+              />
+            </div>
+          </div>
+          <div className=" flex w-full items-start justify-center">
+            <div className=" flex w-[768px] aspect-[2/3.4] relative">
+              <Image
+                src="/assets/images/flowchart-pas.png"
+                alt=""
+                fill
+                className=" object-center object-cover"
+              />
+            </div>
           </div>
         </div>
       </Container>

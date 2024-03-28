@@ -1,4 +1,5 @@
 import Container from "@/components/container";
+import Image from "next/image";
 
 export default function strukturOrganisasi() {
   return (
@@ -13,7 +14,16 @@ export default function strukturOrganisasi() {
         </div>
       </div>
       <Container className=" px-24">
-        <div></div>
+        <div className=" flex w-full items-center justify-center py-10">
+          <div className=" flex w-[912px] aspect-[4.2/3] relative shadow-lg shadow-slate-600">
+            <Image
+              fill
+              src="/assets/images/struktur-org.jpeg"
+              alt=""
+              className=" "
+            />
+          </div>
+        </div>
       </Container>
     </>
   );

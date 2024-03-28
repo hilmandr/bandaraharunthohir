@@ -17,14 +17,7 @@ export default function Dashboard() {
               </h2>
             </div>
             <div className=" flex w-full h-64 relative justify-end mr-10">
-              <div className=" flex aspect-[6/4] relative overflow-auto">
-                {/* <Image
-                  src="/image/dashboard/hero.png"
-                  alt=""
-                  fill
-                  className=""
-                /> */}
-              </div>
+              <div className=" flex aspect-[6/4] relative overflow-auto"></div>
             </div>
           </div>
         </Container>

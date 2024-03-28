@@ -14,7 +14,7 @@ export default function MaklumatPelayanan() {
         </div>
       </div>
       <Container>
-        <div className=" flex w-full items-center justify-center pt-10">
+        <div className=" flex w-full items-center justify-center py-10">
           <div className=" flex w-[912px] aspect-[4.2/3] relative shadow-lg shadow-slate-600">
             <Image
               fill

@@ -3,7 +3,6 @@ import React from "react";
 import {
   MdDashboard,
   MdNewspaper,
-  MdImage,
   MdMessage,
   MdEventNote,
 } from "react-icons/md";

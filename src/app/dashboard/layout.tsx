@@ -1,5 +1,6 @@
 import SideNav from "@/components/dashboard/sidenav";
 import { Metadata } from "next";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Dashboard - Kantor UPBU Harun Thohir - Gresik",
@@ -19,8 +20,8 @@ export default function MainLayout({
         <main className=" flex w-[calc(100%-286px)] ml-[286px]">
           {children}
         </main>
-        {/* <Footer /> */}
       </div>
+      <Toaster />
     </>
   );
 }

@@ -39,33 +39,14 @@ import { format } from "date-fns";
 import {
   CreateLaporanRequest,
   createLaporanRequest,
-} from "@/db/validation/laporan.validation";
+} from "@/lib/validation/laporan.validation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import InputLaporanKegiatanHarian from "./input-laporan-kegiatan-harian";
+import { LaporanKegiatanHarian } from "@/db/schema";
 
 const data: Payment[] = [
   {
     id: "m5gr84i9",
-    tanggal: new Date("October 15, 1996"),
-    link: "blablabla.com",
-  },
-  {
-    id: "3u1reuv4",
-    tanggal: new Date("October 15, 1996"),
-    link: "google.com",
-  },
-  {
-    id: "derv1ws0",
-    tanggal: new Date("October 15, 1996"),
-    link: "blablabla.com",
-  },
-  {
-    id: "5kma53ae",
-    tanggal: new Date("October 15, 1996"),
-    link: "blablabla.com",
-  },
-  {
-    id: "bhqecj4p",
     tanggal: new Date("October 15, 1996"),
     link: "blablabla.com",
   },
@@ -76,6 +57,10 @@ export type Payment = {
   tanggal: Date;
   link: string;
 };
+
+interface ProjectItemProps {
+  laporan: LaporanKegiatanHarian[];
+}
 
 export const columns: ColumnDef<Payment>[] = [
   {
@@ -148,7 +133,7 @@ export const columns: ColumnDef<Payment>[] = [
   },
 ];
 
-export function TableLaporanKegiatanHarian() {
+export function TableLaporanKegiatanHarian({ laporan }: ProjectItemProps) {
   const form = useForm<CreateLaporanRequest>({
     resolver: zodResolver(createLaporanRequest),
     defaultValues: {

@@ -131,7 +131,7 @@ export default function Header() {
                 <Link href="">PPID</Link>
               </Button>
               <Button variant="ghost" asChild>
-                <Link href="">Kontak</Link>
+                <Link href="/kontak">Kontak</Link>
               </Button>
             </div>
           </div>

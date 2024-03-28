@@ -78,17 +78,27 @@ export default function ViewKegiatanHarian() {
                   </Button>
                 </div>
                 <div className=" py-5 flex w-full items-center justify-center">
-                  {!laporan ? (
-                    <p>not found</p>
+                  {!tanggal ? (
+                    <p className=" rounded-md py-2 flex w-full items-center justify-between px-3 border border-rose-700 bg-black/80 text-rose-500">
+                      Silakan pilih tanggal
+                    </p>
                   ) : (
-                    <Link
-                      href={laporan.link}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      className=" rounded-md py-2 flex w-full items-center justify-between px-3 border border-rose-700 bg-white/20 text-rose-500"
-                    >
-                      {laporan.link}
-                    </Link>
+                    <>
+                      {!laporan ? (
+                        <p className=" rounded-md py-2 flex w-full items-center justify-between px-3 border border-rose-700 bg-black/80 text-rose-500">
+                          Link pada tanggal tersebut tidak tersedia
+                        </p>
+                      ) : (
+                        <Link
+                          href={laporan.link}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          className=" rounded-md py-2 flex w-full items-center justify-between px-3 border border-rose-700 bg-black/80 text-rose-500"
+                        >
+                          {laporan?.link}
+                        </Link>
+                      )}
+                    </>
                   )}
                 </div>
               </div>

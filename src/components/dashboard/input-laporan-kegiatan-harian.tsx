@@ -2,7 +2,7 @@
 import {
   CreateLaporanRequest,
   createLaporanRequest,
-} from "@/db/validation/laporan.validation";
+} from "@/lib/validation/laporan.validation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import {

@@ -2,8 +2,11 @@ import Link from "next/link";
 import Container from "../container";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import { getBerita } from "@/action/berita";
+import { format } from "date-fns";
 
-export default function Berita() {
+export default async function Berita() {
+  const berita = await getBerita();
   return (
     <>
       <div className=" flex w-full bg-slate-50">
@@ -17,93 +20,38 @@ export default function Berita() {
                 Berita Kegiatan dan Pengumuman Terbaru
               </p>
             </div>
-            <div className=" grid w-full grid-cols-3 gap-5">
-              <div className=" flex flex-col w-full  bg-slate-50 shadow-lg">
-                <Link href="">
-                  <div className=" flex flex-col group">
-                    <div className=" flex w-full aspect-video relative overflow-hidden">
-                      <div className=" absolute w-10 h-10 bg-yellow-200"></div>
-                      <Image
-                        src="/assets/images/berita/berita-1.jpg"
-                        alt=""
-                        fill
-                        className=""
-                      ></Image>
-                    </div>
-                    <div className=" flex flex-col py-5 px-8">
-                      <h1 className=" font-semibold">
-                        Rapat Evaluasi Kegiatan Tahun 2023 dan Penyusunan
-                        Program Kerja Tahun 2024
-                      </h1>
-                      <p className=" text-sm leading-loose pt-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat...
-                      </p>
-                    </div>
+            <div className=" grid w-full lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-5">
+              {berita.map((itemBerita, i) => (
+                <>
+                  <div className=" flex flex-col w-full bg-slate-50 shadow-lg">
+                    <Link href={itemBerita.slug}>
+                      <div className=" flex flex-col group">
+                        <div className=" flex w-full aspect-video relative overflow-hidden">
+                          <div className=" absolute bg-rose-800 z-10 right-0 items-center flex justify-center">
+                            <p className=" text-white text-sm px-3 py-2">
+                              {format(itemBerita.tanggal, "P")}
+                            </p>
+                          </div>
+                          <Image
+                            src={itemBerita.thumbnail as string}
+                            alt=""
+                            fill
+                            className=""
+                          ></Image>
+                        </div>
+                        <div className=" flex flex-col py-5 px-8">
+                          <h1 className=" font-semibold">{itemBerita.judul}</h1>
+                          <p className=" text-sm leading-loose pt-2">
+                            {itemBerita.summary}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
                   </div>
-                </Link>
-              </div>
-              <div className=" flex flex-col w-full  bg-slate-50 shadow-lg">
-                <Link href="">
-                  <div className=" flex flex-col group">
-                    <div className=" flex w-full aspect-video relative overflow-hidden">
-                      <div className=" absolute w-10 h-10 bg-yellow-200"></div>
-                      <Image
-                        src="/assets/images/berita/berita-1.jpg"
-                        alt=""
-                        fill
-                        className=""
-                      ></Image>
-                    </div>
-                    <div className=" flex flex-col py-5 px-8">
-                      <h1 className=" font-semibold">
-                        Rapat Evaluasi Kegiatan Tahun 2023 dan Penyusunan
-                        Program Kerja Tahun 2024
-                      </h1>
-                      <p className=" text-sm leading-loose pt-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat...
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-              <div className=" flex flex-col w-full  bg-slate-50 shadow-lg">
-                <Link href="">
-                  <div className=" flex flex-col group">
-                    <div className=" flex w-full aspect-video relative overflow-hidden">
-                      <div className=" absolute w-10 h-10 bg-yellow-200"></div>
-                      <Image
-                        src="/assets/images/berita/berita-1.jpg"
-                        alt=""
-                        fill
-                        className=""
-                      ></Image>
-                    </div>
-                    <div className=" flex flex-col py-5 px-8">
-                      <h1 className=" font-semibold">
-                        Rapat Evaluasi Kegiatan Tahun 2023 dan Penyusunan
-                        Program Kerja Tahun 2024
-                      </h1>
-                      <p className=" text-sm leading-loose pt-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat...
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              </div>
+                </>
+              ))}
             </div>
-            <div className=" flex w-full items-center justify-end py-10">
+            <div className=" flex w-full items-center lg:justify-end md:justify-center sm:justify-center py-10">
               <Button className=" px-8 py-2 rounded-md bg-rose-600 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-rose-600">
                 Lihat Semua
               </Button>
