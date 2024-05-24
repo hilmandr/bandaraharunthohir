@@ -4,11 +4,7 @@ import HomeSectionLapopranHarian from "../../components/home/home-laporan-harian
 import HomeSectionBerita from "../../components/home/home-berita";
 import HomeSectionFaq from "../../components/home/home-faq";
 
-export default function MainLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Home() {
   return (
     <>
       {/* begin : banner */}
