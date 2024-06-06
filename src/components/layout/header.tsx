@@ -21,7 +21,7 @@ export default function Header() {
 
   const actualPathName = useMemo<string>(() => {
     const arrPathname = pathname.split("/");
-    arrPathname.splice(0, 2);
+    arrPathname.splice(0, 1);
     return `/${arrPathname.join("/")}`;
   }, [pathname]);
   const scrollPosition = useScrollPosition();
@@ -39,13 +39,13 @@ export default function Header() {
     <>
       <div
         className={cn(
-          " flex w-full h-24 items-center fixed z-50 top-0 transition-all transform duration-100 text-neutral-200",
+          " flex w-full h-24 items-center fixed z-50 top-0 transition-all transform duration-500 text-neutral-200",
           {
-            " bg-black/90 transition-all transform duration-300 backdrop-blur-md h-20 shadow-lg":
+            " bg-black/90 transition-all transform duration-500 backdrop-blur-md h-20 shadow-lg":
               actualPathName !== "/",
           },
           {
-            " bg-black/90 transition-all transform duration-300 backdrop-blur-md h-20 shadow-lg":
+            " bg-black/90 transition-all transform duration-500 backdrop-blur-md h-20 shadow-lg":
               scrollPosition > 100,
           }
         )}
@@ -75,10 +75,15 @@ export default function Header() {
                     <Tooltip>
                       <TooltipTrigger asChild>
                         <Button
-                          variant={activeMenu(menu.path) ? "default" : "ghost"}
+                          // variant={
+                          //   activeMenu(menu.path) ? "outline" : "secondary"
+                          // }
                           className=" rounded-lg"
                         >
-                          <Link href={menu.path} className="">
+                          <Link
+                            href={menu.path}
+                            className=" text-white font-semibold"
+                          >
                             {menu.title}
                           </Link>
                         </Button>
@@ -94,11 +99,11 @@ export default function Header() {
                               <Button
                                 key={submenu.title}
                                 size="sm"
-                                variant={
-                                  activeMenu(submenu.path)
-                                    ? "default"
-                                    : "secondary"
-                                }
+                                // variant={
+                                //   activeMenu(submenu.path)
+                                //     ? "outline"
+                                //     : "secondary"
+                                // }
                                 className=" justify-start text-slate-900"
                                 asChild
                               >
@@ -114,8 +119,11 @@ export default function Header() {
               ))}
               {MENU.map((menu) => (
                 <>
-                  <Button asChild variant="ghost" className=" rounded-full">
-                    <Link href={menu.path} className="">
+                  <Button asChild className=" rounded-full">
+                    <Link
+                      href={menu.path}
+                      className=" text-white font-semibold"
+                    >
                       {menu.title}
                     </Link>
                   </Button>

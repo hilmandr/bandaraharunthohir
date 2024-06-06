@@ -1,5 +1,5 @@
 "use client";
-import { ArrowRight, Mouse } from "iconsax-react";
+import { ArrowRight, Mouse, SearchNormal } from "iconsax-react";
 import { Button } from "../ui/button";
 import Container from "../common/container";
 import DatePicker from "../common/date-picker";
@@ -29,13 +29,18 @@ export default function HomeSectionLapopranHarian() {
                   variant="default"
                   className=" border border-neutral-950 rounded-full  text-neutral-900 transition-all duration-200 group px-6 bg-white hover:bg-black hover:text-white delay-0"
                 >
-                  <p className=" left-3 relative group-hover:left-0 transition-all duration-200 ">
+                  <p className=" left-3 relative group-hover:left-0 transition-all duration-200 lg:visible">
                     Cari Laporan Kegiatan Harian
                   </p>
+                  <SearchNormal
+                    size={26}
+                    variant="Linear"
+                    className=" visible lg:hidden"
+                  />
                   <ArrowRight
                     size="20"
                     variant="Linear"
-                    className=" relative opacity-0 group-hover:opacity-100 left-0 group-hover:left-2 transition-all duration-200"
+                    className=" relative opacity-0 group-hover:opacity-100 left-0 group-hover:left-2 transition-all duration-200 lg:visible"
                   />
                 </Button>
               </div>

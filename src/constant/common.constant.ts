@@ -43,10 +43,10 @@ export const MENUS: Array<TMenu> = [
         title: "Permohonan PAS",
         path: "/layanan/permohonan-pas",
       },
-      {
-        title: "Permohonan Informasi",
-        path: "/layanan/permohonan-informasi",
-      },
+      // {
+      //   title: "Permohonan Informasi",
+      //   path: "/layanan/permohonan-informasi",
+      // },
     ],
   },
   {
@@ -58,16 +58,16 @@ export const MENUS: Array<TMenu> = [
         path: "/tentang/struktur-organisasi",
       },
       {
-        title: "Tugas dan Fungsi",
-        path: "/tugas-dan-fungsi",
+        title: "Peran dan Fungsi",
+        path: "/tentang/peran-dan-fungsi",
       },
       {
         title: "Visi dan Misi",
-        path: "/visi-dan-misi",
+        path: "/tentang/visi-dan-misi",
       },
       {
         title: "Maklumat Pelayanan",
-        path: "/maklumat-pelayanan",
+        path: "/tentang/maklumat-pelayanan",
       },
     ],
   },

@@ -4,9 +4,27 @@ import { cn } from "../lib/utils";
 import { avenirMedium } from "../constant/fonts.constant";
 import Provider from "../components/common/provider";
 
+// export const metadata: Metadata = {
+//   title: "Bandara Harun Thohir",
+//   description: "Kantor UPBU Kelas III Harun Thohir - Gresik",
+// };
+
 export const metadata: Metadata = {
-  title: "Bandara Harun Thohir",
-  description: "Kantor UPBU Kelas III Harun Thohir - Gresik",
+  title: "Kantor UPBU Harun Thohir - Gresik",
+  metadataBase: new URL("https://bandaraharunthohir.vercel.app/"),
+  description: "Website resmi Kantor UPBU Harun Thohir - Gresik",
+  icons: "/images/logo-kemenhub.PNG",
+  creator: "Kantor UPBU Harun Thohir - Gresik",
+  publisher: "Kantor UPBU Harun Thohir - Gresik",
+  openGraph: {
+    title: "Kantor UPBU Harun Thohir - Gresik",
+    description: "Website resmi Kantor UPBU Harun Thohir - Gresik",
+    images: ["/images/image-banner.jpeg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/image-banner.jpeg"],
+  },
 };
 
 export default function RootLayout({
