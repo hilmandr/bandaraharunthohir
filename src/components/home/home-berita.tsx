@@ -38,7 +38,7 @@ export default function HomeSectionBerita() {
                   <div className=" flex flex-col justify-between w-full h-60 bg-white p-6">
                     <Link
                       href={berita.path}
-                      className=" text-2xl font-semibold"
+                      className=" lg:text-2xl font-semibold text-xl"
                     >
                       {berita.title}
                     </Link>
