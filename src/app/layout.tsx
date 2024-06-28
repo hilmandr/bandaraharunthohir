@@ -3,11 +3,7 @@ import "./globals.css";
 import { cn } from "../lib/utils";
 import { avenirMedium } from "../constant/fonts.constant";
 import Provider from "../components/common/provider";
-
-// export const metadata: Metadata = {
-//   title: "Bandara Harun Thohir",
-//   description: "Kantor UPBU Kelas III Harun Thohir - Gresik",
-// };
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Kantor UPBU Harun Thohir - Gresik",

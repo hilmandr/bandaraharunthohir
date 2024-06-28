@@ -3,6 +3,7 @@ import HomeSectionLayanan from "../../components/home/home-layanan";
 import HomeSectionLapopranHarian from "../../components/home/home-laporan-harian";
 import HomeSectionBerita from "../../components/home/home-berita";
 import HomeSectionFaq from "../../components/home/home-faq";
+import React from "react";
 
 export default function Home() {
   return (

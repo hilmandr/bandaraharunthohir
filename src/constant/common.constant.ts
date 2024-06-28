@@ -1,23 +1,50 @@
 import {
   AirplaneSquare,
+  Category2,
   DocumentDownload,
+  Folder,
   Instagram,
   Map1,
+  MenuBoard,
+  Message2,
   Mobile,
   Sms,
   UserSquare,
-  Youtube,
 } from "iconsax-react";
 import {
   TAddressFooter,
   TFaq,
   TLayanan,
   TMenu,
+  TSidenav,
   TSosmedFooter,
   TTautanFooter,
 } from "../type/common.types";
-import { FaInstagram, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa";
-import { FaSquareTwitter, FaXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
+export const SIDENAV: Array<TSidenav> = [
+  {
+    title: "Dashboard",
+    path: "/dashboard",
+    icon: Category2,
+  },
+  {
+    title: "Berita",
+    path: "/dashboard/berita",
+    icon: Folder,
+  },
+  {
+    title: "Kegiatan Harian",
+    path: "/dashboard/kegiatan-harian",
+    icon: MenuBoard,
+  },
+  {
+    title: "Kritik & Saran",
+    path: "/dashboard/kritik-saran",
+    icon: Message2,
+  },
+];
 
 export const MENU: Array<TMenu> = [
   {

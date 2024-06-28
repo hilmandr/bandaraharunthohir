@@ -1,5 +1,11 @@
 import { Icon, IconProps } from "iconsax-react";
 
+export type TSidenav = {
+  title: string;
+  path: string;
+  icon?: Icon;
+};
+
 export type TMenu = {
   title: string;
   path: string;

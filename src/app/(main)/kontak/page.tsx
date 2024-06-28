@@ -7,19 +7,23 @@ import { Input } from "../../../components/ui/input";
 import { Label } from "../../../components/ui/label";
 import { Textarea } from "../../../components/ui/textarea";
 import Image from "next/image";
+import React from "react";
 
 export default function KontakPage() {
   return (
     <>
-      <HeadingTitle>
-        <div className=" flex flex-col w-full items-center justify-end sm:pb-4 pb-10">
-          <h1 className="text-white lg:text-5xl text-3xl font-semibold">
-            Kontak
-          </h1>
-          <p className=" text-white mt-2 text-center lg:text-base text-sm lg:max-w-4xl max-w-md">
-            Berikan saran dan masukan anda agar pelayanan kami menjadi lebih
-            baik lagi.
-          </p>
+      <HeadingTitle className=" z-20">
+        <div className=" flex flex-col w-full h-[480px] items-center justify-center bg-[url('/images/banner-1.JPG')] bg-cover bg-center shadow-lg ">
+          <div className=" w-full h-[480px] bg-black/60 absolute z-0"></div>
+          <div className=" flex flex-col w-full items-center justify-center z-10 mt-10">
+            <h1 className="text-white lg:text-5xl text-3xl font-semibold max-w-sm text-center lg:max-w-full">
+              Kontak
+            </h1>
+            <p className=" text-white mt-2 text-center lg:text-base text-sm max-w-md lg:max-w-full">
+              Berikan saran dan masukan anda agar pelayanan kami menjadi lebih
+              baik lagi.
+            </p>
+          </div>
         </div>
       </HeadingTitle>
       <Container>

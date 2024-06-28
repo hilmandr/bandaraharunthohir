@@ -1,17 +1,22 @@
+import React from "react";
 import Container from "../../../../components/common/container";
 import HeadingTitle from "../../../../components/common/heading";
 export default function VisiMisiPage() {
   return (
     <>
-      <HeadingTitle>
-        <div className=" flex flex-col w-full items-center justify-end sm:pb-0 pb-10">
-          <h1 className="text-white lg:text-5xl text-3xl font-semibold">
-            Visi dan Misi
-          </h1>
-          <p className=" text-white mt-2 text-center lg:text-base text-sm lg:max-w-4xl max-w-md">
-            TERWUJUDNYA PENYELENGGARAAN TRANSPORTASI UDARA YANG HANDAL, BERDAYA
-            SAING DAN MEMBERIKAN NILAI TAMBAH DALAM MENDUKUNG KETAHANAN NASIONAL
-          </p>
+      <HeadingTitle className=" z-20">
+        <div className=" flex flex-col w-full h-[480px] items-center justify-center bg-[url('/images/banner-1.JPG')] bg-cover bg-center shadow-lg ">
+          <div className=" w-full h-[480px] bg-black/60 absolute z-0"></div>
+          <div className=" flex flex-col w-full items-center justify-center z-10 mt-10">
+            <h1 className="text-white lg:text-5xl text-3xl font-semibold max-w-sm text-center lg:max-w-full">
+              Visi dan Misi
+            </h1>
+            <p className=" text-white mt-2 text-center lg:text-base text-sm max-w-md lg:max-w-3xl">
+              Terwujudnya penyelenggaraan transpotasi udara yang handal, berdaya
+              saing dan memberikan nilai tambah dalam mendukung ketahanan
+              nasional.
+            </p>
+          </div>
         </div>
       </HeadingTitle>
       <Container>

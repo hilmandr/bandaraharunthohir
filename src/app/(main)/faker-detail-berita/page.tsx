@@ -4,27 +4,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { FAKER_BERITA } from "../../../constant/faker.constant";
 import { format } from "date-fns";
+import React from "react";
 
 export default function FaketDetailBerita() {
   return (
     <>
       <Container>
-        <div className=" flex relative pt-32 pb-10 gap-x-10">
+        <div className=" lg:flex relative pt-32 pb-10 gap-x-10">
           <div className=" max-w-3xl ">
             <h1 className=" text-3xl font-semibold">
               Kunjungan Rombongan Tamu VIP KASAL TNI AL Beserta Rombongan Dalam
               Giat Meninjau Keadaan Pulau Bawean Pasca Bencana Gempa Bumi
             </h1>
             <div className=" flex w-full items-center justify-start gap-8 py-5 text-neutral-500 text-sm">
-              <span className=" flex gap-x-2">
+              <span className=" flex gap-x-1">
                 <Folder size="18" color="#333333" />
                 <p>Berita</p>
               </span>
-              <span className=" flex gap-x-2">
+              <span className=" flex gap-x-1">
                 <Calendar size="18" color="#333333" />
                 <p>14 Maret 2024</p>
               </span>
-              <span className=" flex gap-x-2">
+              <span className=" flex gap-x-1">
                 <ReceiptEdit size="18" color="#333333" />
                 <p>Admin</p>
               </span>
@@ -104,7 +105,7 @@ export default function FaketDetailBerita() {
                           src={berita.thumbnail}
                           alt=""
                           fill
-                          className=" w-full h-full"
+                          className=" w-full h-full object-cover object-center"
                         />
                       </Link>
                     </div>

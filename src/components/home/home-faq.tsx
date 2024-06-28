@@ -1,3 +1,4 @@
+import React from "react";
 import { FAQ } from "../../constant/common.constant";
 import Container from "../common/container";
 import {

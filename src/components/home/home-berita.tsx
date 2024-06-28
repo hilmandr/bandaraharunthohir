@@ -5,8 +5,11 @@ import { format } from "date-fns";
 import { Button } from "../ui/button";
 import { ArrowRight } from "iconsax-react";
 import Image from "next/image";
+import { getBerita } from "../../action/berita";
+import React from "react";
 
-export default function HomeSectionBerita() {
+export default async function HomeSectionBerita() {
+  const berita = await getBerita();
   return (
     <>
       <Container>
@@ -21,11 +24,11 @@ export default function HomeSectionBerita() {
             </p>
           </div>
           <div className=" grid lg:grid-cols-2 w-full gap-8 mt-10">
-            {FAKER_BERITA.map((berita) => (
+            {berita.slice(0, 2).map((berita) => (
               <>
                 <div className=" flex flex-col w-full shadow-lg">
                   <Link
-                    href={berita.path}
+                    href={`/berita/${berita.slug}`}
                     className=" flex w-full aspect-video relative group overflow-hidden"
                   >
                     <Image
@@ -37,16 +40,16 @@ export default function HomeSectionBerita() {
                   </Link>
                   <div className=" flex flex-col justify-between w-full h-60 bg-white p-6">
                     <Link
-                      href={berita.path}
+                      href={`/berita/${berita.slug}`}
                       className=" lg:text-2xl font-semibold text-xl"
                     >
-                      {berita.title}
+                      {berita.judul}
                     </Link>
                     <div className=" flex w-full items-center justify-between">
                       <p className=" text-sm text-neutral-600">
-                        {format(berita.date, "PPP")}
+                        {format(berita.tanggal, "PPP")}
                       </p>
-                      <Link href={berita.path}>
+                      <Link href={`/berita/${berita.slug}`}>
                         <Button
                           variant="default"
                           className=" border border-neutral-950 rounded-full bg-white text-neutral-900 transition-all duration-200 hover:bg-white group px-6"

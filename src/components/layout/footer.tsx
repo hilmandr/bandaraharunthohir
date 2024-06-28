@@ -10,11 +10,12 @@ import {
 } from "../../constant/common.constant";
 import { animateScroll } from "react-scroll";
 import { ArrowUp } from "iconsax-react";
+import React from "react";
 
 export default function Footer() {
   return (
     <>
-      <div className=" flex w-full bg-stone-950 py-10">
+      <div className=" flex w-full bg-stone-950 pb-10 pt-16">
         <Container>
           <div className=" grid lg:grid-cols-2 w-full gap-x-20 gap-y-10 mb-10">
             {/* begin: left */}

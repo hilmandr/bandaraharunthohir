@@ -5,6 +5,7 @@ import Container from "../common/container";
 import DatePicker from "../common/date-picker";
 import Link from "next/link";
 import { Label } from "../ui/label";
+import React from "react";
 
 export default function HomeSectionLapopranHarian() {
   return (

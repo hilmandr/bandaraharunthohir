@@ -21,7 +21,7 @@ export default function Header() {
 
   const actualPathName = useMemo<string>(() => {
     const arrPathname = pathname.split("/");
-    arrPathname.splice(0, 1);
+    arrPathname.splice(0, 2);
     return `/${arrPathname.join("/")}`;
   }, [pathname]);
   const scrollPosition = useScrollPosition();
