@@ -56,41 +56,43 @@ export type TSosmedFooter = {
 
 export type TBerkala = {
   no?: number;
-  judul: string;
-  deskripsi: string;
-  paragraf? :string,
+  judul?: string;
+  deskripsi?: string;
+  paragraf?: string;
   gambar?: string;
+  subLink?: TBerkala[];
   link?: string;
   path?: string;
-}
+};
 
 export type TBerkalaSub = {
   no?: number;
   judul: string;
   deskripsi: string;
-  paragraf? :string,
+  paragraf?: string;
   gambar?: string;
   link?: string;
   path?: string;
   subIsi?: TBerkala[];
-}
+};
 
 export type TSertaMerta = {
   no?: number;
   judul: string;
   deskripsi: string;
-  paragraf? :string,
+  paragraf?: string;
   gambar?: string;
   link?: string;
   path?: string;
-}
+};
 
 export type TSetiapSaat = {
   no?: number;
-  judul: string;
-  deskripsi: string;
-  paragraf? :string,
+  judul?: string;
+  deskripsi?: string;
+  paragraf?: string;
   gambar?: string;
+  subLink?: TSetiapSaat[];
   link?: string;
   path?: string;
-}
+};
